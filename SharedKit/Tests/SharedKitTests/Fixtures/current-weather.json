@@ -1,0 +1,12 @@
+{
+  "temperature": 18.5,
+  "feelsLike": 16.2,
+  "humidity": 0.65,
+  "windSpeed": 14.0,
+  "windDirection": 270.0,
+  "cloudCover": 0.3,
+  "uvIndex": 6,
+  "condition": "partlyCloudy",
+  "icon": "cloud.sun.fill",
+  "date": "2026-04-16T14:00:00Z"
+}

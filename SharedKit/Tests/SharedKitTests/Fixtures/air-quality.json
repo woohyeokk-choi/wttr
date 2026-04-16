@@ -1,0 +1,7 @@
+{
+  "aqi": 29,
+  "category": "good",
+  "primaryPollutant": "PM2.5",
+  "pm25": 12.0,
+  "pm10": 18.0
+}

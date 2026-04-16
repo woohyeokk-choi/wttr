@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+
+    <title>wttr — Not the weather. Just what to do about it.</title>
+    <meta
+      name="description"
+      content="wttr is a decision-first weather app. Grab an umbrella, apply sunscreen, layer up — the answer in three seconds, not twelve data points."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wttr.fyi/" />
+    <meta property="og:title" content="wttr — Not the weather. Just what to do about it." />
+    <meta
+      property="og:description"
+      content="A decision-first weather app. Grab an umbrella, apply sunscreen, layer up — the answer in three seconds."
+    />
+    <meta property="og:image" content="https://wttr.fyi/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="wttr — Not the weather. Just what to do about it." />
+    <meta
+      name="twitter:description"
+      content="A decision-first weather app. Grab an umbrella, apply sunscreen, layer up — the answer in three seconds."
+    />
+    <meta name="twitter:image" content="https://wttr.fyi/og-image.png" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://wttr.fyi/" />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header class="nav" role="banner">
+      <a class="nav__brand" href="/" aria-label="wttr home">
+        <span class="brand-mark" aria-hidden="true">☁︎</span>
+        <span class="brand-name">wttr</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#decisions">Decisions</a>
+        <a href="#how">How it works</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Coming soon on iPhone</p>
+        <h1 id="hero-title" class="hero__title">
+          Not the weather.<br />
+          <span class="accent">Just what to do about it.</span>
+        </h1>
+        <p class="hero__sub">
+          wttr tells you whether to grab an umbrella, apply sunscreen, or layer up —
+          in three seconds, not twelve data points.
+        </p>
+        <div class="cta">
+          <a
+            class="app-store-link"
+            href="#"
+            aria-label="Download wttr on the App Store"
+          >
+            <img
+              src="/app-store-badge.svg"
+              alt="Download on the App Store"
+              width="160"
+              height="54"
+            />
+          </a>
+          <a class="btn btn--ghost" href="#decisions">See how it decides →</a>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="phone" aria-hidden="true">
+          <div class="phone__frame">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="screen-header">
+                <span class="screen-city">San Francisco</span>
+              </div>
+
+              <p class="screen-section">Right now</p>
+              <p class="screen-condition">Partly cloudy.</p>
+
+              <div class="screen-temp">
+                <span class="screen-temp__icon">☀︎</span>
+                <span class="screen-temp__value">63°</span>
+              </div>
+              <p class="screen-compare">7° colder than yesterday ↓</p>
+
+              <div class="screen-cards">
+                <div class="decision decision--safe">
+                  <p class="decision__label">Umbrella</p>
+                  <p class="decision__value">Not needed</p>
+                  <p class="decision__desc">No rain expected.</p>
+                </div>
+                <div class="decision decision--warn">
+                  <p class="decision__label">Sunscreen</p>
+                  <p class="decision__value">UV 8</p>
+                  <p class="decision__desc">Apply SPF.</p>
+                </div>
+                <div class="decision decision--safe">
+                  <p class="decision__label">Air Quality</p>
+                  <p class="decision__value">Good</p>
+                  <p class="decision__desc">Breathe easy.</p>
+                </div>
+                <div class="decision decision--caution">
+                  <p class="decision__label">Sunglasses</p>
+                  <p class="decision__value">Bright</p>
+                  <p class="decision__desc">Bring them.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Decisions -->
+      <section id="decisions" class="section" aria-labelledby="decisions-title">
+        <p class="eyebrow">Decision Cards</p>
+        <h2 id="decisions-title" class="section__title">
+          Five answers to the questions you actually ask.
+        </h2>
+        <p class="section__lead">
+          Every morning you open a weather app to decide something. wttr skips the data
+          dump and answers the question directly.
+        </p>
+
+        <ul class="grid grid--cards">
+          <li class="card">
+            <p class="card__label">Temperature</p>
+            <p class="card__quote">&ldquo;7° colder than yesterday — layer up.&rdquo;</p>
+            <p class="card__q">Colder or warmer than yesterday?</p>
+          </li>
+          <li class="card">
+            <p class="card__label">Umbrella</p>
+            <p class="card__quote">&ldquo;Rain from 3 PM — grab an umbrella.&rdquo;</p>
+            <p class="card__q">Do I need an umbrella?</p>
+          </li>
+          <li class="card">
+            <p class="card__label">Sunscreen</p>
+            <p class="card__quote">&ldquo;UV 8 — apply sunscreen.&rdquo;</p>
+            <p class="card__q">Should I apply SPF?</p>
+          </li>
+          <li class="card">
+            <p class="card__label">Sunglasses</p>
+            <p class="card__quote">&ldquo;Bright & clear — bring sunglasses.&rdquo;</p>
+            <p class="card__q">Bright enough for shades?</p>
+          </li>
+          <li class="card">
+            <p class="card__label">Air Quality</p>
+            <p class="card__quote">&ldquo;AQI 150 — wear a mask outdoors.&rdquo;</p>
+            <p class="card__q">Should I wear a mask?</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="section section--alt" aria-labelledby="how-title">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title" class="section__title">Built around your morning, not the atlas.</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3 class="step__title">Pick what you care about</h3>
+            <p class="step__body">
+              Umbrella, sunscreen, sunglasses, air quality. Turn on only the decisions
+              that matter where you live.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3 class="step__title">Get one clear answer</h3>
+            <p class="step__body">
+              Instead of twelve numbers, wttr tells you: grab an umbrella, apply SPF,
+              layer up. One glance, one decision.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3 class="step__title">Morning check, without opening the app</h3>
+            <p class="step__body">
+              Home screen widget and a morning notification summarize the day. Open the
+              app only when something changes.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p class="footer__brand">
+        <span class="brand-mark" aria-hidden="true">☁︎</span> wttr
+      </p>
+      <p class="footer__meta">
+        © <span id="year">2026</span> wttr. Made with decisions in mind.
+      </p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="mailto:hello@wttr.fyi">Contact</a>
+      </nav>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

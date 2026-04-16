@@ -1,0 +1,31 @@
+appId: com.wttr.app
+name: Onboarding Flow
+---
+- launchApp
+- assertVisible: "wttr"
+- assertVisible:
+    text: "Not the weather.*"
+    enabled: true
+- tapOn: "Get Started"
+# Location permission screen
+- assertVisible: "Where are you?"
+- tapOn: "Enter City Instead"
+# Decision selection screen
+- assertVisible: "What do you care about?"
+- assertVisible: "Temperature"
+- assertVisible: "Umbrella"
+- tapOn: "Umbrella"
+- tapOn: "Next"
+# Notification screen
+- assertVisible: "Morning weather check?"
+- tapOn: "Skip"
+# Widget setup screen
+- assertVisible:
+    text: "Check your decisions.*"
+    enabled: true
+- tapOn: "Maybe Later"
+# Completion screen
+- assertVisible: "You're all set!"
+- tapOn: "Start Using wttr"
+# Main screen should appear
+- assertVisible: "Right now"

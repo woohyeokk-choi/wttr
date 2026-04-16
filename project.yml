@@ -1,0 +1,117 @@
+name: wttr
+options:
+  bundleIdPrefix: com.wttr
+  deploymentTarget:
+    iOS: "17.0"
+  groupSortPosition: top
+  createIntermediateGroups: true
+  defaultConfig: Debug
+
+configs:
+  Debug: debug
+  Release: release
+
+settings:
+  base:
+    SWIFT_VERSION: "6"
+    SWIFT_STRICT_CONCURRENCY: complete
+    TARGETED_DEVICE_FAMILY: "1"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: "${TEAM_ID}"
+
+packages:
+  SharedKit:
+    path: SharedKit
+
+targets:
+  wttr:
+    type: application
+    platform: iOS
+    sources:
+      - path: wttr
+        excludes:
+          - "**/*.entitlements"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wttr.app
+        INFOPLIST_FILE: wttr/Info.plist
+        CODE_SIGN_ENTITLEMENTS: wttr/wttr.entitlements
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+    dependencies:
+      - package: SharedKit
+
+  WttrWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: WttrWidgets
+        excludes:
+          - "**/*.entitlements"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wttr.app.widgets
+        INFOPLIST_FILE: WttrWidgets/Info.plist
+        CODE_SIGN_ENTITLEMENTS: WttrWidgets/WttrWidgets.entitlements
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+    dependencies:
+      - package: SharedKit
+      - target: wttr
+        embed: false
+
+  WttrTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: WttrTests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wttr.app.tests
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/wttr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wttr"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+    dependencies:
+      - target: wttr
+      - package: SharedKit
+
+  WttrUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: WttrUITests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wttr.app.uitests
+    dependencies:
+      - target: wttr
+
+schemes:
+  wttr:
+    build:
+      targets:
+        wttr: all
+        WttrWidgets: all
+        WttrTests: [test]
+        WttrUITests: [test]
+    run:
+      config: Debug
+      storeKitConfiguration: wttr/wttr.storekit
+    test:
+      config: Debug
+      targets:
+        - WttrTests
+        - WttrUITests
+      coverageTargets:
+        - wttr
+    archive:
+      config: Release
+
+  wttr-Release:
+    build:
+      targets:
+        wttr: all
+        WttrWidgets: all
+    run:
+      config: Release
+    archive:
+      config: Release

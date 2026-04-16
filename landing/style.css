@@ -1,0 +1,557 @@
+/* ==========================================================================
+   wttr landing — style.css
+   Palette, typography, and components mirror docs/design.md (Hello Weather
+   inspired, Decision-first). Pure CSS, no framework.
+   ========================================================================== */
+
+:root {
+  /* Base — light */
+  --bg: #ffffff;
+  --bg-alt: #f5f5f7;
+  --surface: #ffffff;
+  --surface-alt: #f5f5f7;
+  --text: #1d1d1f;
+  --text-2: #6e6e73;
+  --text-3: #aeaeb2;
+  --separator: #e5e5ea;
+
+  /* Brand */
+  --brand: #007aff; /* iOS system blue (light) */
+  --brand-ink: #ffffff; /* text on brand bg */
+
+  /* Decision accents (docs/design.md §2.3) */
+  --safe: #34c759;
+  --caution: #ffd60a;
+  --warn: #ff9f0a;
+  --danger: #ff453a;
+  --info: #5ac8fa;
+  --accent: #5856d6;
+
+  /* Radii / spacing (docs/design.md §12) */
+  --r-s: 8px;
+  --r-m: 12px;
+  --r-l: 16px;
+  --r-xl: 24px;
+  --sp-xs: 4px;
+  --sp-s: 8px;
+  --sp-m: 12px;
+  --sp-l: 16px;
+  --sp-xl: 24px;
+  --sp-xxl: 32px;
+
+  --font:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --maxw: 1080px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --bg-alt: #0a0a0a;
+    --surface: #1c1c1e;
+    --surface-alt: #141416;
+    --text: #f5f5f7;
+    --text-2: #98989d;
+    --text-3: #636366;
+    --separator: #2c2c2e;
+
+    --brand: #0a84ff; /* iOS system blue (dark) */
+  }
+}
+
+/* Reset --------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+input {
+  font: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Nav ----------------------------------------------------------------------- */
+.nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--sp-l) var(--sp-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+.brand-mark {
+  font-size: 22px;
+}
+.nav__links {
+  display: flex;
+  gap: var(--sp-xl);
+  font-size: 15px;
+  color: var(--text-2);
+}
+
+@media (max-width: 640px) {
+  .nav__links {
+    display: none;
+  }
+}
+
+/* Shared -------------------------------------------------------------------- */
+.section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 80px var(--sp-xl);
+}
+.section--alt {
+  background: var(--bg-alt);
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.section--alt > * {
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--sp-xl);
+  padding-right: var(--sp-xl);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin-bottom: var(--sp-m);
+}
+
+.section__title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--sp-l);
+}
+
+.section__lead {
+  font-size: 18px;
+  color: var(--text-2);
+  max-width: 640px;
+  margin-bottom: var(--sp-xxl);
+}
+
+/* Buttons ------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid transparent;
+  transition: transform 0.1s ease, background-color 0.15s ease;
+  white-space: nowrap;
+}
+.btn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.btn--primary {
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--separator);
+}
+
+/* Official Apple App Store badge
+   Apple marketing guidelines: min height 40px, clear space = 1/10 height.
+   Keep the SVG untouched — no filters/recolor. */
+.app-store-link {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+.app-store-link:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+.app-store-link img {
+  height: 54px;
+  width: auto;
+  display: block;
+}
+@media (prefers-color-scheme: dark) {
+  /* Black badge on dark bg — invert to white per Apple guidelines */
+  .app-store-link img {
+    filter: invert(1);
+  }
+}
+
+/* Hero ---------------------------------------------------------------------- */
+.hero {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 40px var(--sp-xl) 96px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero .eyebrow {
+  grid-column: 1;
+}
+.hero__title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+.hero__title .accent {
+  color: var(--brand);
+}
+.hero__sub {
+  grid-column: 1;
+  margin-top: var(--sp-l);
+  font-size: 20px;
+  color: var(--text-2);
+  max-width: 520px;
+}
+.cta {
+  grid-column: 1;
+  margin-top: var(--sp-xxl);
+  display: flex;
+  gap: var(--sp-m);
+  flex-wrap: wrap;
+}
+
+/* Phone mockup */
+.phone {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+}
+.phone__frame {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--separator);
+  border-radius: 42px;
+  padding: 14px;
+  box-shadow:
+    0 30px 80px -20px rgba(0, 0, 0, 0.25),
+    0 10px 20px -10px rgba(0, 0, 0, 0.15);
+}
+.phone__notch {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 26px;
+  background: var(--text);
+  border-radius: 999px;
+  z-index: 2;
+}
+.phone__screen {
+  background: var(--bg);
+  border-radius: 30px;
+  padding: 56px 18px 24px;
+  min-height: 560px;
+}
+.screen-header {
+  text-align: center;
+  margin-bottom: var(--sp-xl);
+}
+.screen-city {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+.screen-section {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.screen-condition {
+  color: var(--text-2);
+  font-size: 14px;
+  margin: 4px 0 var(--sp-l);
+}
+.screen-temp {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-m);
+  margin-bottom: 4px;
+}
+.screen-temp__icon {
+  font-size: 28px;
+}
+.screen-temp__value {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.screen-compare {
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: var(--sp-l);
+}
+.screen-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-s);
+}
+
+/* Decision card (phone preview) */
+.decision {
+  background: var(--surface-alt);
+  border-radius: var(--r-l);
+  padding: 12px;
+}
+.decision__label {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-2);
+  margin-bottom: 4px;
+}
+.decision__value {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.decision__desc {
+  font-size: 11px;
+  color: var(--text-2);
+}
+.decision--warn .decision__value {
+  color: var(--warn);
+}
+.decision--caution .decision__value {
+  color: var(--caution);
+}
+.decision--safe .decision__value {
+  color: var(--safe);
+}
+.decision--danger .decision__value {
+  color: var(--danger);
+}
+
+@media (max-width: 840px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-bottom: 64px;
+  }
+  .phone {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: var(--sp-xl);
+  }
+}
+
+/* Decision grid ------------------------------------------------------------- */
+.grid--cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-l);
+}
+.card {
+  background: var(--surface-alt);
+  border-radius: var(--r-l);
+  padding: 24px;
+}
+.card__label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-2);
+  margin-bottom: var(--sp-m);
+}
+.card__quote {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: var(--sp-m);
+  letter-spacing: -0.01em;
+}
+.card__q {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+/* Steps --------------------------------------------------------------------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--sp-xl);
+}
+.step {
+  padding: 24px;
+  border-radius: var(--r-l);
+  background: var(--surface);
+  border: 1px solid var(--separator);
+}
+.step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: var(--brand-ink);
+  font-weight: 700;
+  margin-bottom: var(--sp-m);
+}
+.step__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: var(--sp-s);
+}
+.step__body {
+  color: var(--text-2);
+  font-size: 16px;
+}
+
+/* Waitlist ------------------------------------------------------------------ */
+.section--cta {
+  text-align: center;
+}
+.section--cta .section__lead {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--sp-xl);
+}
+.waitlist {
+  display: flex;
+  gap: var(--sp-s);
+  max-width: 440px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.waitlist input[type='email'] {
+  flex: 1 1 240px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--separator);
+  background: var(--surface);
+  color: var(--text);
+  min-width: 0;
+}
+.waitlist input[type='email']:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* FAQ ----------------------------------------------------------------------- */
+.faq {
+  display: grid;
+  gap: var(--sp-l);
+}
+.faq__item {
+  padding: 24px;
+  background: var(--surface-alt);
+  border-radius: var(--r-l);
+}
+.faq__item dt {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: var(--sp-s);
+}
+.faq__item dd {
+  margin: 0;
+  color: var(--text-2);
+}
+
+/* Footer -------------------------------------------------------------------- */
+.footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 48px var(--sp-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-l);
+  border-top: 1px solid var(--separator);
+  color: var(--text-2);
+  font-size: 14px;
+}
+.footer__brand {
+  font-weight: 700;
+  color: var(--text);
+}
+.footer__links {
+  display: flex;
+  gap: var(--sp-l);
+}

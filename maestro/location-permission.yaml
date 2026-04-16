@@ -1,0 +1,15 @@
+appId: com.wttr.app
+name: Location permission dialog appears
+---
+- launchApp:
+    clearState: true
+    permissions:
+      all: unset
+- assertVisible: "Get Started"
+- tapOn: "Get Started"
+- assertVisible:
+    text: "Where are you?"
+- tapOn: "Allow Location"
+# System permission dialog should appear. Maestro sees it as a native alert.
+- assertVisible:
+    text: ".*Allow.*"

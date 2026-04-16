@@ -1,0 +1,93 @@
+[
+  {
+    "date": "2026-04-16T12:00:00Z",
+    "high": 22.0, "low": 12.0,
+    "condition": {
+      "temperature": 18.5, "feelsLike": 16.7, "humidity": 0.63, "windSpeed": 14.5,
+      "windDirection": 272.0, "cloudCover": 0.3, "uvIndex": 7,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T12:00:00Z"
+    },
+    "precipChance": 0.10,
+    "sunrise": "2026-04-16T05:32:00Z",
+    "sunset": "2026-04-16T18:45:00Z",
+    "moonPhase": "waxingCrescent"
+  },
+  {
+    "date": "2026-04-17T12:00:00Z",
+    "high": 23.0, "low": 13.0,
+    "condition": {
+      "temperature": 19.0, "feelsLike": 17.2, "humidity": 0.67, "windSpeed": 16.0,
+      "windDirection": 280.0, "cloudCover": 0.5, "uvIndex": 5,
+      "condition": "rain", "icon": "cloud.rain.fill", "date": "2026-04-17T12:00:00Z"
+    },
+    "precipChance": 0.40,
+    "sunrise": "2026-04-17T05:30:00Z",
+    "sunset": "2026-04-17T18:46:00Z",
+    "moonPhase": "waxingCrescent"
+  },
+  {
+    "date": "2026-04-18T12:00:00Z",
+    "high": 24.0, "low": 14.0,
+    "condition": {
+      "temperature": 20.0, "feelsLike": 18.3, "humidity": 0.58, "windSpeed": 12.0,
+      "windDirection": 265.0, "cloudCover": 0.2, "uvIndex": 8,
+      "condition": "clear", "icon": "sun.max.fill", "date": "2026-04-18T12:00:00Z"
+    },
+    "precipChance": 0.05,
+    "sunrise": "2026-04-18T05:29:00Z",
+    "sunset": "2026-04-18T18:47:00Z",
+    "moonPhase": "firstQuarter"
+  },
+  {
+    "date": "2026-04-19T12:00:00Z",
+    "high": 25.0, "low": 15.0,
+    "condition": {
+      "temperature": 21.0, "feelsLike": 19.4, "humidity": 0.55, "windSpeed": 10.0,
+      "windDirection": 255.0, "cloudCover": 0.15, "uvIndex": 9,
+      "condition": "clear", "icon": "sun.max.fill", "date": "2026-04-19T12:00:00Z"
+    },
+    "precipChance": 0.05,
+    "sunrise": "2026-04-19T05:27:00Z",
+    "sunset": "2026-04-19T18:48:00Z",
+    "moonPhase": "firstQuarter"
+  },
+  {
+    "date": "2026-04-20T12:00:00Z",
+    "high": 26.0, "low": 16.0,
+    "condition": {
+      "temperature": 22.0, "feelsLike": 20.5, "humidity": 0.52, "windSpeed": 9.0,
+      "windDirection": 250.0, "cloudCover": 0.2, "uvIndex": 9,
+      "condition": "clear", "icon": "sun.max.fill", "date": "2026-04-20T12:00:00Z"
+    },
+    "precipChance": 0.08,
+    "sunrise": "2026-04-20T05:26:00Z",
+    "sunset": "2026-04-20T18:49:00Z",
+    "moonPhase": "waxingGibbous"
+  },
+  {
+    "date": "2026-04-21T12:00:00Z",
+    "high": 27.0, "low": 17.0,
+    "condition": {
+      "temperature": 22.5, "feelsLike": 21.0, "humidity": 0.55, "windSpeed": 11.0,
+      "windDirection": 260.0, "cloudCover": 0.3, "uvIndex": 8,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-21T12:00:00Z"
+    },
+    "precipChance": 0.12,
+    "sunrise": "2026-04-21T05:24:00Z",
+    "sunset": "2026-04-21T18:50:00Z",
+    "moonPhase": "waxingGibbous"
+  },
+  {
+    "date": "2026-04-22T12:00:00Z",
+    "high": 28.0, "low": 18.0,
+    "condition": {
+      "temperature": 23.0, "feelsLike": 21.5, "humidity": 0.60, "windSpeed": 13.0,
+      "windDirection": 270.0, "cloudCover": 0.4, "uvIndex": 7,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-22T12:00:00Z"
+    },
+    "precipChance": 0.15,
+    "sunrise": "2026-04-22T05:23:00Z",
+    "sunset": "2026-04-22T18:51:00Z",
+    "moonPhase": "waxingGibbous"
+  }
+]

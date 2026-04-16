@@ -1,0 +1,23 @@
+appId: com.wttr.app
+name: Main Screen Verification
+---
+- launchApp
+# Skip onboarding if shown
+- runFlow:
+    when:
+      visible: "Get Started"
+    file: skip-onboarding.yaml
+# Verify main screen sections
+- assertVisible: "Right now"
+- assertVisible: "Coming up"
+- assertVisible: "Today"
+# Scroll down to see weekly section
+- scrollUntilVisible:
+    element: "This week"
+    direction: DOWN
+    timeout: 5000
+- assertVisible: "This week"
+# Verify tab bar
+- assertVisible: "Location"
+- assertVisible: "Stats"
+- assertVisible: "Settings"

@@ -1,0 +1,218 @@
+[
+  {
+    "hour": "2026-04-16T00:00:00Z",
+    "condition": {
+      "temperature": 18.5, "feelsLike": 16.5, "humidity": 0.65, "windSpeed": 14.0,
+      "windDirection": 270.0, "cloudCover": 0.3, "uvIndex": 0,
+      "condition": "clearNight", "icon": "moon.fill", "date": "2026-04-16T00:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T01:00:00Z",
+    "condition": {
+      "temperature": 17.9, "feelsLike": 16.0, "humidity": 0.66, "windSpeed": 13.5,
+      "windDirection": 268.0, "cloudCover": 0.3, "uvIndex": 0,
+      "condition": "clearNight", "icon": "moon.fill", "date": "2026-04-16T01:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T02:00:00Z",
+    "condition": {
+      "temperature": 17.4, "feelsLike": 15.5, "humidity": 0.67, "windSpeed": 13.0,
+      "windDirection": 265.0, "cloudCover": 0.35, "uvIndex": 0,
+      "condition": "cloudyNight", "icon": "cloud.moon.fill", "date": "2026-04-16T02:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T03:00:00Z",
+    "condition": {
+      "temperature": 16.8, "feelsLike": 15.0, "humidity": 0.68, "windSpeed": 12.5,
+      "windDirection": 262.0, "cloudCover": 0.35, "uvIndex": 0,
+      "condition": "cloudyNight", "icon": "cloud.moon.fill", "date": "2026-04-16T03:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T04:00:00Z",
+    "condition": {
+      "temperature": 16.2, "feelsLike": 14.4, "humidity": 0.69, "windSpeed": 12.0,
+      "windDirection": 260.0, "cloudCover": 0.4, "uvIndex": 0,
+      "condition": "cloudyNight", "icon": "cloud.moon.fill", "date": "2026-04-16T04:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T05:00:00Z",
+    "condition": {
+      "temperature": 15.7, "feelsLike": 13.9, "humidity": 0.70, "windSpeed": 11.5,
+      "windDirection": 258.0, "cloudCover": 0.4, "uvIndex": 0,
+      "condition": "cloudyNight", "icon": "cloud.moon.fill", "date": "2026-04-16T05:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T06:00:00Z",
+    "condition": {
+      "temperature": 15.2, "feelsLike": 13.4, "humidity": 0.70, "windSpeed": 11.0,
+      "windDirection": 256.0, "cloudCover": 0.3, "uvIndex": 1,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T06:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T07:00:00Z",
+    "condition": {
+      "temperature": 15.8, "feelsLike": 14.0, "humidity": 0.68, "windSpeed": 11.5,
+      "windDirection": 260.0, "cloudCover": 0.3, "uvIndex": 2,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T07:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T08:00:00Z",
+    "condition": {
+      "temperature": 16.5, "feelsLike": 14.7, "humidity": 0.66, "windSpeed": 12.0,
+      "windDirection": 265.0, "cloudCover": 0.3, "uvIndex": 3,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T08:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T09:00:00Z",
+    "condition": {
+      "temperature": 17.2, "feelsLike": 15.4, "humidity": 0.65, "windSpeed": 13.0,
+      "windDirection": 268.0, "cloudCover": 0.25, "uvIndex": 5,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T09:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T10:00:00Z",
+    "condition": {
+      "temperature": 17.9, "feelsLike": 16.1, "humidity": 0.64, "windSpeed": 14.0,
+      "windDirection": 270.0, "cloudCover": 0.25, "uvIndex": 6,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T10:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T11:00:00Z",
+    "condition": {
+      "temperature": 18.5, "feelsLike": 16.7, "humidity": 0.63, "windSpeed": 14.5,
+      "windDirection": 272.0, "cloudCover": 0.3, "uvIndex": 7,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T11:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T12:00:00Z",
+    "condition": {
+      "temperature": 19.1, "feelsLike": 17.3, "humidity": 0.62, "windSpeed": 15.0,
+      "windDirection": 275.0, "cloudCover": 0.35, "uvIndex": 7,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T12:00:00Z"
+    },
+    "precipitationChance": 0.15, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T13:00:00Z",
+    "condition": {
+      "temperature": 19.6, "feelsLike": 17.8, "humidity": 0.63, "windSpeed": 15.5,
+      "windDirection": 278.0, "cloudCover": 0.4, "uvIndex": 6,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T13:00:00Z"
+    },
+    "precipitationChance": 0.20, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T14:00:00Z",
+    "condition": {
+      "temperature": 19.8, "feelsLike": 18.0, "humidity": 0.65, "windSpeed": 16.0,
+      "windDirection": 280.0, "cloudCover": 0.5, "uvIndex": 5,
+      "condition": "cloudy", "icon": "cloud.fill", "date": "2026-04-16T14:00:00Z"
+    },
+    "precipitationChance": 0.30, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T15:00:00Z",
+    "condition": {
+      "temperature": 19.5, "feelsLike": 17.7, "humidity": 0.70, "windSpeed": 17.0,
+      "windDirection": 285.0, "cloudCover": 0.7, "uvIndex": 3,
+      "condition": "rain", "icon": "cloud.rain.fill", "date": "2026-04-16T15:00:00Z"
+    },
+    "precipitationChance": 0.75, "precipitationType": "rain", "precipitationAmount": 2.5
+  },
+  {
+    "hour": "2026-04-16T16:00:00Z",
+    "condition": {
+      "temperature": 18.8, "feelsLike": 17.0, "humidity": 0.75, "windSpeed": 16.5,
+      "windDirection": 283.0, "cloudCover": 0.8, "uvIndex": 2,
+      "condition": "rain", "icon": "cloud.rain.fill", "date": "2026-04-16T16:00:00Z"
+    },
+    "precipitationChance": 0.80, "precipitationType": "rain", "precipitationAmount": 3.0
+  },
+  {
+    "hour": "2026-04-16T17:00:00Z",
+    "condition": {
+      "temperature": 18.2, "feelsLike": 16.5, "humidity": 0.72, "windSpeed": 16.0,
+      "windDirection": 280.0, "cloudCover": 0.7, "uvIndex": 2,
+      "condition": "rain", "icon": "cloud.rain.fill", "date": "2026-04-16T17:00:00Z"
+    },
+    "precipitationChance": 0.70, "precipitationType": "rain", "precipitationAmount": 1.5
+  },
+  {
+    "hour": "2026-04-16T18:00:00Z",
+    "condition": {
+      "temperature": 17.8, "feelsLike": 16.1, "humidity": 0.68, "windSpeed": 15.0,
+      "windDirection": 275.0, "cloudCover": 0.5, "uvIndex": 1,
+      "condition": "partlyCloudy", "icon": "cloud.sun.fill", "date": "2026-04-16T18:00:00Z"
+    },
+    "precipitationChance": 0.25, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T19:00:00Z",
+    "condition": {
+      "temperature": 17.3, "feelsLike": 15.6, "humidity": 0.66, "windSpeed": 14.0,
+      "windDirection": 272.0, "cloudCover": 0.4, "uvIndex": 0,
+      "condition": "partlyCloudyNight", "icon": "cloud.moon.fill", "date": "2026-04-16T19:00:00Z"
+    },
+    "precipitationChance": 0.15, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T20:00:00Z",
+    "condition": {
+      "temperature": 16.9, "feelsLike": 15.2, "humidity": 0.65, "windSpeed": 13.5,
+      "windDirection": 270.0, "cloudCover": 0.35, "uvIndex": 0,
+      "condition": "cloudyNight", "icon": "cloud.moon.fill", "date": "2026-04-16T20:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T21:00:00Z",
+    "condition": {
+      "temperature": 16.5, "feelsLike": 14.8, "humidity": 0.65, "windSpeed": 13.0,
+      "windDirection": 268.0, "cloudCover": 0.3, "uvIndex": 0,
+      "condition": "clearNight", "icon": "moon.fill", "date": "2026-04-16T21:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T22:00:00Z",
+    "condition": {
+      "temperature": 16.1, "feelsLike": 14.4, "humidity": 0.66, "windSpeed": 12.5,
+      "windDirection": 265.0, "cloudCover": 0.3, "uvIndex": 0,
+      "condition": "clearNight", "icon": "moon.fill", "date": "2026-04-16T22:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  },
+  {
+    "hour": "2026-04-16T23:00:00Z",
+    "condition": {
+      "temperature": 15.7, "feelsLike": 14.0, "humidity": 0.67, "windSpeed": 12.0,
+      "windDirection": 263.0, "cloudCover": 0.3, "uvIndex": 0,
+      "condition": "clearNight", "icon": "moon.fill", "date": "2026-04-16T23:00:00Z"
+    },
+    "precipitationChance": 0.10, "precipitationType": "none", "precipitationAmount": 0.0
+  }
+]

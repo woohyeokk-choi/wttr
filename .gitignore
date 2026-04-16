@@ -1,0 +1,40 @@
+# Xcode
+*.xcodeproj/
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+*.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+*.xcuserdata/
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+DerivedData/
+build/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# Local config
+Config.xcconfig
+
+# OMC state
+.omc/
+
+# Claude Code local state
+.claude/
+
+# Internal planning docs (kept local — strategy/monetization)
+docs/
+
+# OS
+.DS_Store
+*.swp
+*~

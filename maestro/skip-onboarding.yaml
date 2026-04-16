@@ -1,0 +1,9 @@
+appId: com.wttr.app
+name: Skip Onboarding Helper
+---
+- tapOn: "Get Started"
+- tapOn: "Enter City Instead"
+- tapOn: "Next"
+- tapOn: "Skip"
+- tapOn: "Maybe Later"
+- tapOn: "Start Using wttr"

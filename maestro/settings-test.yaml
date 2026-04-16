@@ -1,0 +1,29 @@
+appId: com.wttr.app
+name: Settings Navigation
+---
+- launchApp
+# Skip onboarding if shown
+- runFlow:
+    when:
+      visible: "Get Started"
+    file: skip-onboarding.yaml
+# Navigate to settings
+- tapOn: "Settings"
+# Verify settings sections
+- assertVisible: "Decision Cards"
+- assertVisible: "Morning Briefing"
+- assertVisible: "Manage Locations"
+- assertVisible: "Units"
+- assertVisible: "About"
+# Navigate to Decision Cards
+- tapOn: "Decision Cards"
+- assertVisible: "Temperature"
+- assertVisible: "Umbrella"
+# Go back
+- tapOn:
+    text: "Settings"
+    index: 0
+# Navigate to Units
+- tapOn: "Units"
+- assertVisible: "Celsius"
+- assertVisible: "Fahrenheit"

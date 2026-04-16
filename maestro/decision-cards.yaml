@@ -1,0 +1,12 @@
+appId: com.wttr.app
+name: Decision Cards Verification
+---
+- launchApp
+- runFlow:
+    when:
+      visible: "Get Started"
+    file: skip-onboarding.yaml
+# Verify decision cards are visible in Right Now section
+- assertVisible: "Right now"
+# Check for temperature decision (always present)
+- assertVisible: "TEMPERATURE"
